@@ -30,6 +30,6 @@ int main(void)
 	{
 		printf("and is less than 6 and not 0");
 	}
-	printf("\ln");
+	printf(" ");
 	return (0);
 }
