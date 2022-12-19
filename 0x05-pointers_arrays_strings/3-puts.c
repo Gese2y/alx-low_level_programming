@@ -5,7 +5,7 @@
  * @str: string parameter to print
  *
  * Return: Nothing
- */
+*/
 
 void _puts(char *str)
 
