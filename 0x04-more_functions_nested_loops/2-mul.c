@@ -1,18 +1,18 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * mul - operation for multplication
+ * mul -  checks for checks for a digit (0 through 9).
  *
- * @a: for variable of first number
- * @b: for seccond number
+ * @a: a -  Variable
+ * @b: b - variable
  *
- *
- * Return: return multiplication of two number
+ * Return: Always 0.
  */
 
 int mul(int a, int b)
 
 {
+
 	int mul;
 
 	mul = a * b;
