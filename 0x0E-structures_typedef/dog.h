@@ -1,5 +1,9 @@
-struct dog - such structure, wow
-/*
+#ifndef _dog_h_
+
+#define _dog_h_
+
+/**
+ * struct dog - such structure, wow
  * @name: dog's name
  *
  * @age: dog's age
