@@ -9,12 +9,12 @@
  * @f: pointer to function
  */
 
-void print_name(char *name, void (*f)(char *))
+void print_name(char *Name, void (*f)(char *))
 
 {
 
 	if (f != NULL)
 	{
-		(f) (name);
+		(f) (Name);
 	}
 }
