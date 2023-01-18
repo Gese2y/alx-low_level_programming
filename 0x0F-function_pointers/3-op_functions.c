@@ -1,81 +1,41 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
 #include "3-calc.h"
 
 /**
- * op_add - addition operation
+ * main - entry point
  *
- * @a: first term
- * @b: second term
+ * @argc: argument count
+ * @argv: argument vector
  *
- * Return: result
+ * Return: the job has been finished
  */
 
-int op_add(int a, int b)
+int main(int argc, char *argv[])
 
 {
 
-	return (a + b);
-}
+	int v;
 
-/**
- * op_sub - subtraction operation
- *
- * @a: first term
- * @b: second term
- *
- * Return: result
- */
-
-int op_sub(int a, int b)
-
-{
-
-	return (a - b);
-}
-
-/**
- * op_mul - multiplication operation
- *
- * @a: first term
- * @b: second term
- *
- * Return: result
- */
-
-int op_mul(int a, int b)
-
-{
-	
-	return (a * b);
-}
-
-/**
- * op_div - division operation
- *
- * @a: first term
- * @b: second term
- *
- * Return: result
- */
-
-int op_div(int a, int b)
-
-{
-
-	return (a / b);
-}
-
-/**
- * op_mod - modulo operation
- *
- * @a: first term
- * @b: second term
- *
- * Return: result
- */
-
-int op_mod(int a, int b)
-
-{
-
-	return (a % b);
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	if ((argv[2][1] != 0) || ((argv[2][0] != '+') &&  (argv[2][0] != '-')
+				&& (argv[2][0] != '*') && (argv[2][0] != '/') && (argv[2][0] != '%')))
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if ((argv[2][0] == '/' || (argv[2][0] == '%')) && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	v = get_op_func(argv[2]) (atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", v);
+	return (0);
 }
